@@ -80,8 +80,8 @@ unsigned long revolutionsSpurwheel = 1;
 unsigned long bijwerkTijd = millis();
 unsigned int jaartal = 2019;
 unsigned int opslagEEprom = 200;
-int addresjaartal = 88;                                                  // adres in EEprom waar jaartal wordt gelezen en geschreven.
-int addresomwenteling = 78;                                              // adres in EEprom waar omwentelingen spoorwiel wordt gelezen en geschreven. 
+int addresjaartal = 88;
+int addresomwenteling = 78;
 int addresOpslag = 68;
 
 
@@ -146,7 +146,7 @@ void loop()
     stilGevlucht();
     }
 
-  if (millis() - bijwerkTijd > 300000)                                   // hier is vastgelegd dat de gegevens elke 5 minuten naar de EEprom worden geschreven 
+  if (millis() - bijwerkTijd > 300000)
     {
     bijwerkEEprom();
     }
